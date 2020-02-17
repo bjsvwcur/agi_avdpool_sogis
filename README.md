@@ -17,8 +17,11 @@ Git clonen:
 ```
 Für Test "language plpythonu":
 psql -h localhost -p 54322 -d pub -U admin -c "SET ROLE admin" --single-transaction -f ./development_dbs/test.sql 
+pwd = admin
+
 Alle Schemas:
-psql -h localhost -p 54322 -d pub -U admin -c "SET ROLE admin" --single-transaction -f ./development_dbs/sogis-schemas.sql 
+psql -h localhost -p 54322 -d pub -U admin -c "SET ROLE admin" --single-transaction -f ./development_dbs/sogis-schemas.sql
+pwd = admin
 ```
 
 3. ENV Variablen auf die "Container"-DB setzen:
