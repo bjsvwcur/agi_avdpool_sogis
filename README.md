@@ -6,7 +6,7 @@ Git clonen:
   git clone https://github.com/bjsvwcur/agi_avdpool_sogis.git
 ```
 
-Docker Container erstellen mit 2 PostgreSQL DBs edit und Pub. Inkl. Schema agi_dm01avso24_sogis in beiden DBs.
+Docker Container erstellen mit 2 PostgreSQL DBs edit und Pub. Inkl. Schema agi_dm01avso24_sogis in der Edit-DB.
 
 ```
   docker-compose down # (this command is optional; it's just for cleaning up any already existing DB containers)
