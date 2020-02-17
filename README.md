@@ -6,22 +6,11 @@ Git clonen:
   git clone https://github.com/bjsvwcur/agi_avdpool_sogis.git
 ```
 
-1. Docker Container erstellen mit 2 PostgreSQL DBs edit und Pub. Inkl. Schema agi_dm01avso24_sogis in der Edit-DB.
+1. Docker Container erstellen mit 2 PostgreSQL DBs edit und Pub. Inkl. Schema agi_dm01avso24_sogis in der Edit-DB und Schema avdpool in der Pub-DB.
 
 ```
   docker-compose down # (this command is optional; it's just for cleaning up any already existing DB containers)
-  docker-compose run --rm --user $UID -v $PWD/development_dbs:/home/gradle/project gretl "sleep 20 && cd /home/gradle && gretl -b project/build-dev.gradle createSchemaLandUsePlans"
-```
-
-2. Schemas (aus Sogis-DB) importieren:
-```
-Für Test "language plpythonu":
-psql -h localhost -p 54322 -d pub -U admin -c "SET ROLE admin" --single-transaction -f ./development_dbs/test.sql 
-pwd = admin
-
-Alle Schemas:
-psql -h localhost -p 54322 -d pub -U admin -c "SET ROLE admin" --single-transaction -f ./development_dbs/sogis-schemas.sql
-pwd = admin
+  docker-compose run --rm --user $UID -v $PWD/development_dbs:/home/gradle/project gretl "sleep 20 && cd /home/gradle && gretl -b project/build-dev.gradle createSchemaLandUsePlans createSchemaLandUsePlansPub"
 ```
 
 3. ENV Variablen auf die "Container"-DB setzen:
