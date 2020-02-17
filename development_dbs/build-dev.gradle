@@ -1,0 +1,21 @@
+import ch.so.agi.gretl.api.TransferSet
+import ch.so.agi.gretl.tasks.*
+import java.nio.file.Paths
+import de.undercouch.gradle.tasks.download.Download
+
+apply plugin: "de.undercouch.download"
+apply plugin: "ch.so.agi.gretl"
+
+ext {
+    pathToTempFolder = System.getProperty("java.io.tmpdir")
+
+}    
+
+// Cannot use GRETL for ili2pgImportSchema since not all v4 options
+// are exposed. 
+task createSchemaLandUsePlans(type: SqlExecutor){
+    database = [dbUriEdit, "admin", "admin"]
+    sqlFiles = ['agi_dm01avso24.sql', 'agi_dm01avso24_grants.sql']
+}
+
+
