@@ -28,10 +28,9 @@ Git clonen:
 ```
 ./ili2pg_dataimportEdit_dm01avso24_2493.sh-- Grant privileges on schemas
 ./ili2pg_dataimportEdit_dm01avso24_2499.sh
-psql -h localhost -p 54322 -d pub -U admin -c "SET ROLE admin" --single-transaction -f av_avdpool_ng.dump -f av_avdpool_ng_grants.sql
 ```
 
 5. Daten von der Edit-DB in die Pub-DB kopieren
 ```
-sudo -E ../start-gretl.sh --docker-image sogis/gretl-runtime:latest --docker-network agidm01avso24sogis_default --job-directory /home/bjsvwcur/agi_dm01avso24_sogis/agi_dm01avso24_sogis/
+sudo -E ../start-gretl.sh --docker-image sogis/gretl-runtime:latest --docker-network agiavdpoolsogis_default --job-directory /home/bjsvwcur/agi_avdpool_sogis/agi_avdpool_sogis/
   ```
