@@ -32,5 +32,5 @@ Git clonen:
 
 5. Daten von der Edit-DB in die Pub-DB kopieren
 ```
-sudo -E ../start-gretl.sh --docker-image sogis/gretl-runtime:latest --docker-network agiavdpoolsogis_default --job-directory /home/bjsvwcur/agi_avdpool_sogis/agi_avdpool_sogis/
+sudo -E ../start-gretl.sh --docker-image sogis/gretl-runtime:latest --docker-network agiavdpoolsogis_default --job-directory /home/bjsvwcur/Meine-Repos/agi_avdpool_sogis/agi_avdpool_sogis/
   ```
