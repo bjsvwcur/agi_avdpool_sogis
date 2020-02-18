@@ -1,0 +1,27 @@
+import ch.so.agi.gretl.tasks.*
+import ch.so.agi.gretl.api.TransferSet
+
+apply plugin: 'ch.so.agi.gretl'
+
+description = "GRETL-Job für Datenumbau der amtlichen Vermessung von der edit-DB in die sogis-DB. Die Tabellen * werden nicht in die sogis-DB geschrieben."
+
+defaultTasks 'transferavdpool'
+
+task transferavdpool(type: Db2Db){
+    sourceDb = [dbUriEdit, dbUserEdit, dbPwdEdit]
+    targetDb = [dbUriPub, dbUserPub, dbPwdPub]
+    transferSets = [
+            new TransferSet('agi_dm01avso24_bdbed.sql','avdpool.bdbed', true),
+            new TransferSet('agi_dm01avso24_bdbed_objnam.sql','avdpool.bdbed_objnam', true),
+            new TransferSet('agi_dm01avso24_bdbed_proj.sql','avdpool.bdbed_proj', true),
+            new TransferSet('agi_dm01avso24_bdbed_symbol.sql','avdpool.bdbed_symbol', true),
+            new TransferSet('agi_dm01avso24_eoline.sql','avdpool.eoline', true),
+            new TransferSet('agi_dm01avso24_eopnt.sql','avdpool.eopnt', true),
+            new TransferSet('agi_dm01avso24_eopoly.sql','avdpool.eopoly', true),
+            new TransferSet('agi_dm01avso24_flurn.sql','avdpool.flurn', true),
+            new TransferSet('agi_dm01avso24_flurn_pos.sql','avdpool.flurn_pos', true),
+            new TransferSet('agi_dm01avso24_gebadr.sql','avdpool.gebadr', true), 
+            new TransferSet('agi_dm01avso24_gebein.sql','avdpool.gebein', true)
+    ]
+}
+
