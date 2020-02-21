@@ -15,7 +15,10 @@ ext {
 // are exposed. 
 task createSchemaLandUsePlans(type: SqlExecutor){
     database = [dbUriEdit, "admin", "admin"]
-    sqlFiles = ['agi_dm01avso24.sql', 'agi_dm01avso24_grants.sql']
+    sqlFiles = ['arp_npl.sql', 'arp_npl_grants.sql', 'agi_dm01avso24.sql', 'agi_dm01avso24_grants.sql']
 }
 
-
+task createSchemaLandUsePlansPub(type: SqlExecutor){
+    database = [dbUriPub, "admin", "admin"]
+    sqlFiles = ['agi_avdpool.sql', 'agi_avdpool_grants.sql']
+}

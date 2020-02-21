@@ -1,0 +1,44 @@
+-- Stand Februar 2020: bestehende Daten sind archiviert (archiv = 1). Neu werden die Daten nicht mehr archiviert (archiv = 0)
+
+--update avdpool.bbav93dm01
+update avdpool.bdbed set archive = 1 where  archive = 0;
+update avdpool.bdbed_objnam set archive = 1 where  archive = 0;
+update avdpool.bdbed_proj set archive = 1 where  archive = 0;
+update avdpool.bdbed_symbol set archive = 1 where  archive = 0;
+--update avdpool.cvs_revisions set archive = 1 where  archive = 0;
+--update avdpool.eoav93dm01 set archive = 1 where  archive = 0;
+update avdpool.eoline set archive = 1 where  archive = 0;
+update avdpool.eopnt set archive = 1 where  archive = 0;
+update avdpool.eopoly set archive = 1 where  archive = 0;
+update avdpool.flurn set archive = 1 where  archive = 0;
+update avdpool.flurn_pos set archive = 1 where  archive = 0;
+update avdpool.gebadr set archive = 1 where  archive = 0;
+update avdpool.gebein set archive = 1 where  archive = 0;
+update avdpool.gebnummer set archive = 1 where  archive = 0;
+update avdpool.gelaendename set archive = 1 where  archive = 0;
+update avdpool.gemgre set archive = 1 where  archive = 0;
+update avdpool.grenzpnt set archive = 1 where  archive = 0;
+update avdpool.hfp2 set archive = 1 where  archive = 0;
+update avdpool.hfp3 set archive = 1 where  archive = 0;
+update avdpool.hgpkt set archive = 1 where  archive = 0;
+update avdpool.hohgre set archive = 1 where  archive = 0;
+update avdpool.lfp3 set archive = 1 where  archive = 0;
+--update avdpool.lieferantenoperat set archive = 1 where  archive = 0;
+--update avdpool.lieferungen set archive = 1 where  archive = 0;
+update avdpool.liegen set archive = 1 where  archive = 0;
+update avdpool.liegen_pos set archive = 1 where  archive = 0;
+--update avdpool.nfgeometer set archive = 1 where  archive = 0;
+--update avdpool.notification set archive = 1 where  archive = 0;
+--update avdpool.operate_verifiziert set archive = 1 where  archive = 0;
+update avdpool.ortsnam set archive = 1 where  archive = 0;
+update avdpool.ortsnam_pos set archive = 1 where  archive = 0;
+update avdpool.planeinteilung set archive = 1 where  archive = 0;
+--update avdpool.poi_typ set archive = 1 where  archive = 0;
+update avdpool.proj_grund set archive = 1 where  archive = 0;
+update avdpool.proj_grund_pos set archive = 1 where  archive = 0;
+update avdpool.rohrltg set archive = 1 where  archive = 0;
+update avdpool.selbstrecht set archive = 1 where  archive = 0;
+update avdpool.strnam set archive = 1 where  archive = 0;
+update avdpool.strstueck set archive = 1 where  archive = 0;
+update avdpool.toleranzstufe set archive = 1 where  archive = 0;
+--update avdpool.vaav93dm01 set archive = 1 where  archive = 0;
