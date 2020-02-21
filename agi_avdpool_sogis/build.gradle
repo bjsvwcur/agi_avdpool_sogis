@@ -13,7 +13,7 @@ task deleteData(type: SqlExecutor){
     sqlFiles = ['avdpool_delete_data.sql']
 }
 
-task transferavdpool(type: Db2D, dependsOn:'deleteData'){
+task transferavdpool(type: Db2Db, dependsOn:'deleteData'){
     sourceDb = [dbUriEdit, dbUserEdit, dbPwdEdit]
     targetDb = [dbUriPub, dbUserPub, dbPwdPub]
     transferSets = [
