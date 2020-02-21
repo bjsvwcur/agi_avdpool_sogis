@@ -9,13 +9,13 @@ defaultTasks 'transferavdpool'
 
 task deleteData(type: SqlExecutor){
     description = "Löscht die Daten mit archiv=0 im Schema avdpool"
-    database = [dbUriPub, dbUserPub, dbPwdPub]
+    database = [dbUriSogis, dbUserSogis, dbPwdSogis]
     sqlFiles = ['avdpool_delete_data.sql']
 }
 
 task transferavdpool(type: Db2Db, dependsOn:'deleteData'){
     sourceDb = [dbUriEdit, dbUserEdit, dbPwdEdit]
-    targetDb = [dbUriPub, dbUserPub, dbPwdPub]
+    targetDb = [dbUriSogis, dbUserSogis, dbPwdSogis]
     transferSets = [
             new TransferSet('agi_dm01avso24_bdbed.sql','avdpool.bdbed', false),
             new TransferSet('agi_dm01avso24_bdbed_objnam.sql','avdpool.bdbed_objnam', false),
